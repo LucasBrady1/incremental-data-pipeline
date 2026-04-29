@@ -1,6 +1,6 @@
 # Pipeline de Dados Incremental com Python e SQLServer
 
-Este projeto implementa um pipeline de dados focado em eficiência e escalabilidade. O objetivo principal é realizar a ingestão de dados de forma incremental, partindo de arquivos CSV (simulando um Data Lake) para um banco de dados SQLite, processando apenas os registros novos ou atualizados desde a última execução.
+Este projeto implementa um pipeline de dados focado em eficiência e escalabilidade. O objetivo principal é realizar a ingestão de dados de forma incremental, partindo de arquivos CSV (simulando um Data Lake) para um banco de dados SQLServer, processando apenas os registros novos ou atualizados desde a última execução.
 
 ## Objetivo do Projeto
 
@@ -12,7 +12,7 @@ O fluxo de dados segue três etapas principais controladas por uma tabela técni
 
 1. **Consulta de Estado**: Antes de iniciar, o pipeline consulta a tabela `pipeline_control` para recuperar o último timestamp processado.
 2. **Extração e Transformação**: O script lê a origem (CSV) e aplica um filtro temporal baseado no marcador recuperado. Os dados passam por uma limpeza para remover duplicidades dentro do lote atual.
-3. **Carga com UPSERT**: A persistência no SQLite utiliza a lógica de "Update ou Insert". Se o ID do registro já existe, os dados são atualizados; caso contrário, são inseridos.
+3. **Carga com UPSERT**: A persistência no SQLServer utiliza a lógica de "Update ou Insert". Se o ID do registro já existe, os dados são atualizados; caso contrário, são inseridos.
 
 ## Diferenciais Técnicos
 
@@ -31,7 +31,7 @@ O funcionamento foi validado através de três cenários de teste:
 
 - **Python 3.x**
 - **Pandas**: Para manipulação e filtragem dos dados.
-- **SQLAlchemy / SQLite**: Para persistência e gerenciamento do Data Warehouse.
+- **SQLAlchemy / SQLServer**: Para persistência e gerenciamento do Data Warehouse.
 - **Logging**: Para rastreabilidade e monitoramento do processo.
 
 ## Como Executar
