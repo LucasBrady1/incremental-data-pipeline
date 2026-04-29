@@ -1,12 +1,3 @@
-# Motivação Técnica (O "Porquê")
-Nesta seção, explique o problema que você resolveu. Isso mostra senioridade.
-
-Eficiência de Custos: Evita o reprocessamento de dados históricos (Full Load), processando apenas o delta (novos registros).
-
-Confiabilidade: Implementação de Watermarking para saber exatamente onde a última carga parou.
-
-Idempotência: O pipeline pode ser executado múltiplas vezes sem duplicar dados no destino, graças à lógica de UPSERT.
-
 # Arquitetura e Componentes
 Origem: Arquivos CSV simulando uma Landing Zone de um Data Lake.
 
