@@ -1,4 +1,4 @@
-# Pipeline de Dados Incremental com Python e SQLite
+# Pipeline de Dados Incremental com Python e SQLServer
 
 Este projeto implementa um pipeline de dados focado em eficiência e escalabilidade. O objetivo principal é realizar a ingestão de dados de forma incremental, partindo de arquivos CSV (simulando um Data Lake) para um banco de dados SQLite, processando apenas os registros novos ou atualizados desde a última execução.
 
